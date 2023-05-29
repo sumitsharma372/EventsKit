@@ -1,23 +1,19 @@
-import logo from './logo.svg';
+import { useEffect, useState } from 'react';
 import './App.css';
+import Navbar from './components/Navbar';
+import RoutesHandler from './routes';
+import { ToastContainer } from 'react-toastify';
+
+import axios from 'axios';
+axios.defaults.baseURL = process.env.REACT_APP_BASE_URL;
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App font-poppins">
+      <ToastContainer />
+      <Navbar />
+      <RoutesHandler />
     </div>
   );
 }
