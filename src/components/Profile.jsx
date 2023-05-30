@@ -52,7 +52,7 @@ const Profile = () => {
                     className='rounded-full w-[130px] h-[130px]'
                     />
                 </div>
-                <p>{userData?.user.username}</p>
+                <p>{userData?.user?.username}</p>
                 <p className='text-gray-500 text-sm'>{userData?.user?.email}</p>
             </div>
 
